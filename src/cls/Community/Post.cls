@@ -1,9 +1,9 @@
+Include Community
+
 /// Это класс нашей базы для постов.
 /// Эти посты мы и будем анализировать с помащю iKnow.
 Class Community.Post Extends %Persistent
 {
-
-Parameter DSTIME = "AUTO";
 
 Property Nid As %Integer [ Required ];
 
@@ -31,9 +31,19 @@ Property Deleted As %Boolean;
 
 Property Text As %String(MAXLEN = "");
 
-Property Link As %String(MAXLEN = 150);
+Property Link As %String(MAXLEN = 150) [ SqlComputeCode = {set {*} = $$$Server _ "node/" _ {Nid}}, SqlComputed, SqlComputeOnChange = %%INSERT ];
 
 Index Link On Link [ Unique ];
+
+Property Comments As %String(MAXLEN = "");
+
+Property Author As %String(MAXLEN = "");
+
+Index AuthorIndex On Author;
+
+Property GroupsClass As %String(MAXLEN = "");
+
+Property CommentsAmount As %Integer [ Calculated ];
 
 Property PostType As %String(VALUELIST = ",Question,Article");
 
@@ -42,6 +52,6 @@ Property Hash As %String;
 
 Property SubsCount As %Integer;
 
-Property HasCorrectAnswer As %Boolean;
+Property HaveCorrectAnswer As %Boolean;
 
 }
