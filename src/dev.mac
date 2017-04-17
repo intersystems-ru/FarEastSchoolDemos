@@ -1,0 +1,3 @@
+// DSW release export
+s list="SampleUI.BI*.CLS,,*.DFI"
+D $System.OBJ.Export(list,"sampleui_dsw_release.xml")
