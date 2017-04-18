@@ -1,0 +1,60 @@
+/* Welcome to Compass. In this file you should write your main styles. (or centralize your imports) Import this file using the following HTML or equivalent: <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* Include the padding and border in an element's total width and height */
+/* line 7, ../sass/screen.scss */
+* { box-sizing: border-box; }
+
+/* Remove margins and padding from the list */
+/* line 12, ../sass/screen.scss */
+ul { margin: 0; padding: 0; }
+
+/* Style the list items */
+/* line 18, ../sass/screen.scss */
+ul li { cursor: pointer; position: relative; padding: 12px 8px 12px 40px; background: #eee; font-size: 18px; transition: 0.2s; /* make the list items unselectable */ -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+
+/* Set all odd list items to a different color (zebra-stripes) */
+/* line 34, ../sass/screen.scss */
+ul li:nth-child(odd) { background: #f9f9f9; }
+
+/* Darker background-color on hover */
+/* line 39, ../sass/screen.scss */
+ul li:hover { background: #ddd; }
+
+/* When clicked on, add a background color and strike out text */
+/* line 44, ../sass/screen.scss */
+ul li.checked { background: #888; color: #fff; text-decoration: line-through; }
+
+/* Add a "checked" mark when clicked on */
+/* line 51, ../sass/screen.scss */
+ul li.checked::before { content: ''; position: absolute; border-color: #fff; border-style: solid; border-width: 0 2px 2px 0; top: 14px; left: 16px; transform: rotate(45deg); height: 15px; width: 7px; }
+
+/* Style the close button */
+/* line 65, ../sass/screen.scss */
+.close { font-size: 25px; position: absolute; right: 0; top: 0; padding: 12px 16px 12px 16px; }
+
+/* line 73, ../sass/screen.scss */
+.close:hover { background-color: #f44336; color: white; }
+
+/* Style the header */
+/* line 79, ../sass/screen.scss */
+.header { background-color: #f44336; padding: 30px 40px; color: white; text-align: center; }
+
+/* Clear floats after the header */
+/* line 87, ../sass/screen.scss */
+.header:after { content: ""; display: table; clear: both; }
+
+/* Style the input */
+/* line 94, ../sass/screen.scss */
+input { color: black; border: none; width: 75%; padding: 10px; float: left; font-size: 16px; }
+
+/* Style the "Add" button */
+/* line 104, ../sass/screen.scss */
+.addBtn { padding: 10px; width: 25%; background: #d9d9d9; color: #555; float: left; text-align: center; font-size: 16px; cursor: pointer; transition: 0.3s; }
+
+/* line 116, ../sass/screen.scss */
+.addBtn:hover { background-color: #bbb; }
+
+/* line 120, ../sass/screen.scss */
+div#popupMessage { position: fixed; top: 15px; left: 15px; width: auto; height: auto; display: none; }
+
+/* line 129, ../sass/screen.scss */
+select#cat { display: none; }
