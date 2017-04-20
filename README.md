@@ -3,4 +3,5 @@
 
 [Skype участников](https://join.skype.com/DPYaUZFnTU9a)
 
-[DSW Демо карт:](http://37.139.17.101/dsw/index.html#!/?ns=MAP)
+[Демо DSW карт:](http://37.139.17.101/dsw/index.html#!/?ns=MAP)
+[Исходники:](https://github.com/intersystems-ru/dsw-map)
